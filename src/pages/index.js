@@ -2,8 +2,9 @@ import RootLayout from "@/components/layout/RootLayout";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="bg-red-400 main-container">body</h1>
+    // Margin Top 56 px (mt-14) must add otherwise banner section goes to inside the navbar.
+    <div className="bg-orange-200 mt-14">
+      <h1 className="main-container">body</h1>
     </div>
   );
 }
