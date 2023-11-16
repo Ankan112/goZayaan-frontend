@@ -6,9 +6,8 @@ import React from "react";
 
 const SingUpPage = () => {
   const handleFormSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
   };
-  // Name is mandatory but label,type and placeholder are optional.
   const fields = [
     { name: "name", label: "Name" },
     { name: "email", label: "Email", type: "email" },

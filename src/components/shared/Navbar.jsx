@@ -29,11 +29,11 @@ const Navbar = () => {
                 </span>
               </Link>
               <Link
-                href={"/contact"}
+                href={"/dashboard"}
                 className="no-underline hover:underline flex items-center text-lg cursor-pointer mr-5"
               >
                 <span className="text-black text-lg font-semibold">
-                  Contact
+                  Dashboard
                 </span>
               </Link>
               <Link href={"/login"} className="">
@@ -68,10 +68,10 @@ const Navbar = () => {
             <p className="mb-3 font-medium">Courses</p>
           </Link>
           <Link
-            href={"/home"}
+            href={"/dashboard"}
             className="no-underline hover:underline text-black"
           >
-            <p className="mb-3 font-medium">Contact</p>
+            <p className="mb-3 font-medium">Dashboard</p>
           </Link>
           <Link href={"/login"} className="no-underline text-black">
             <Button type="primary" className="mb-3 font-medium">
