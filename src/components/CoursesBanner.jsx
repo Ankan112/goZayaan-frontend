@@ -5,10 +5,10 @@ const CoursesBanner = () => {
   const { Search } = Input;
   const onSearch = (value, _e, info) => console.log(info?.source, value);
   return (
-    <div className="bg-orange-300">
+    <div className="course-banner-bg">
       <div className="main-container h-[60vh] flex justify-center items-center">
         <div>
-          <h1>
+          <h1 className="text-white text-center">
             Unlocking knowledge, empowering minds, and bridging <br /> the gap
             to education, effortlessly.
           </h1>
