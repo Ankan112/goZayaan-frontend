@@ -30,7 +30,7 @@ const DetailsCourseCard = ({ data }) => {
     >
       <div className="w-full flex justify-center items-center">
         <Image
-          src="/images/1.jpg"
+          src={image}
           alt="course-image"
           layout="responsive"
           height={200}
