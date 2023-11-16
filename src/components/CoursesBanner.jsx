@@ -1,10 +1,29 @@
+import { Input } from "antd";
+import FilterDrawer from "./FilterDrawer";
+
 const CoursesBanner = () => {
+  const { Search } = Input;
+  const onSearch = (value, _e, info) => console.log(info?.source, value);
   return (
     <div className="bg-orange-300">
-      <div className="main-container h-[60vh]">
-        <h1>Courses banner</h1>
+      <div className="main-container h-[60vh] flex justify-center items-center">
         <div>
-          <h1>search button and Filtter icon</h1>
+          <h1>
+            Unlocking knowledge, empowering minds, and bridging <br /> the gap
+            to education, effortlessly.
+          </h1>
+          <div className="mt-4 flex justify-center items-center">
+            <Search
+              className="overflow-hidden"
+              size="large"
+              placeholder="Search on Category, Instructors, and Ratings"
+              onSearch={onSearch}
+              enterButton
+            />
+            <div className="ml-3">
+              <FilterDrawer />
+            </div>
+          </div>
         </div>
       </div>
     </div>
