@@ -6,18 +6,15 @@ const Category = () => {
   const categories = [
     {
       id: 1,
-      categoryName: "Technology",
-      image: "url_to_technology_image.jpg",
+      image: "/images/science.jpg",
     },
     {
       id: 2,
-      categoryName: "Science",
-      image: "url_to_science_image.jpg",
+      image: "/images/business-studies.jpg",
     },
     {
       id: 3,
-      categoryName: "Business",
-      image: "url_to_business_image.jpg",
+      image: "/images/humanities.jpg",
     },
   ];
   return (
@@ -31,24 +28,22 @@ const Category = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
         {categories.map((category) => {
-          const { id, categoryName, image } = category;
+          const { id, image } = category;
           return (
             <div
               key={id}
-              className="border border-solid shadow border-gray-200 hover:border-blue-400"
+              className="border border-solid shadow border-gray-200 hover:shadow-lg duration-300"
             >
               <Link href={"/courses"} className="no-underline text-black">
                 <div className="w-full flex justify-center items-center">
                   <Image
-                    src="/images/1.jpg"
+                    src={image}
                     alt="course-image"
                     layout="responsive"
                     height={200}
                     width={380}
                   />
                 </div>
-
-                <h2 className="text-xl font-semibold p-5">Science</h2>
               </Link>
             </div>
           );
