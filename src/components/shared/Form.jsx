@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
-const MainForm = ({ fields, onSubmit, btnName, style }) => {
+const MainForm = ({ fields, onSubmit, btnName, style, toggle }) => {
   const {
     register,
     handleSubmit,
@@ -16,7 +17,7 @@ const MainForm = ({ fields, onSubmit, btnName, style }) => {
   return (
     <div
       className={`p-10 rounded-xl border border-solid border-gray-300 mx-auto ${
-        style ? style : "w-2/5"
+        style ? style : "w-full"
       }`}
     >
       <form onSubmit={handleSubmit(handleFormSubmit)}>
@@ -56,6 +57,7 @@ const MainForm = ({ fields, onSubmit, btnName, style }) => {
           {btnName ? btnName : "Submit"}
         </button>
       </form>
+      {toggle}
     </div>
   );
 };
