@@ -8,24 +8,24 @@ const Navbar = () => {
     setToggle(!toggle);
   };
   return (
-    <div className="relative">
+    <div className="relative mb-14">
       <div className=" h-14 flex justify-center items-center fixed top-0 w-full bg-opacity-70 bg-white backdrop-blur-lg">
         <div className="main-container flex justify-between items-center">
           <h1>Ankan Halder</h1>
           <div className="hidden md:block">
             <div className="flex justify-center items-center">
               <Link
-                href={"/home"}
+                href={"/"}
                 className="no-underline flex items-center text-lg cursor-pointer mr-5"
               >
                 <span className="text-black text-lg font-semibold">Home</span>
               </Link>
               <Link
-                href={"/about"}
+                href={"/courses"}
                 className="no-underline flex items-center text-lg cursor-pointer mr-5"
               >
                 <span className="text-black text-lg font-semibold">
-                  About Us
+                  Courses
                 </span>
               </Link>
               <Link

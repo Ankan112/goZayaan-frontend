@@ -1,10 +1,13 @@
+import Banner from "@/components/Banner";
+import Category from "@/components/Category";
 import RootLayout from "@/components/layout/RootLayout";
 
 export default function Home() {
   return (
     // Margin Top 56 px (mt-14) must add otherwise banner section goes to inside the navbar.
-    <div className="bg-orange-200 mt-14">
-      <h1 className="main-container">body</h1>
+    <div className="main-container">
+      <Banner />
+      <Category />
     </div>
   );
 }

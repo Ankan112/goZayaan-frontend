@@ -1,0 +1,110 @@
+{
+    "courses":[
+        {
+          "id": 1,
+          "image": "url1",
+          "courseName": "Course 1",
+          "category": "A unit",
+          "price": 50,
+          "discountPrice": 40,
+          "enrolled": 222,
+          "rating": 4.5,
+          "liveClass": 23,
+          "subject": 5,
+          "lectureSheets": 50,
+          "exam": {
+            "dailyExam": 99,
+            "weeklyExams": 12,
+            "modelTest": 5
+          },
+          "instructors": [
+            {
+              "instructorId": "inst1",
+              "name": "Dr. Ali",
+              "image": "instructor_url1",
+              "institute": "Dhaka University"
+            },
+            {
+              "instructorId": "inst2",
+              "name": "Dr. Smith",
+              "image": "instructor_url2",
+              "institute": "XYZ Institute"
+            },
+            {
+              "instructorId": "inst3",
+              "name": "Prof. Johnson",
+              "image": "instructor_url3",
+              "institute": "ABC University"
+            }
+          ],
+          "courseSyllabus": "syllabusUrl1"
+        },
+        {
+          "id": 2,
+          "image": "url2",
+          "courseName": "Course 2",
+          "category": "B unit",
+          "price": 60,
+          "discountPrice": 50,
+          "enrolled": 150,
+          "rating": 4.2,
+          "liveClass": 20,
+          "subject": 4,
+          "lectureSheets": 40,
+          "exam": {
+            "dailyExam": 80,
+            "weeklyExams": 10,
+            "modelTest": 3
+          },
+          "instructors": [
+            {
+              "instructorId": "inst4",
+              "name": "Prof. Brown",
+              "image": "instructor_url4",
+              "institute": "EFG University"
+            },
+            {
+              "instructorId": "inst5",
+              "name": "Dr. Taylor",
+              "image": "instructor_url5",
+              "institute": "LMN Institute"
+            }
+          ],
+          "courseSyllabus": "syllabusUrl2"
+        },
+        {
+          "id": 3,
+          "image": "url3",
+          "courseName": "Course 3",
+          "category": "C unit",
+          "price": 45,
+          "discountPrice": 35,
+          "enrolled": 180,
+          "rating": 4.7,
+          "liveClass": 25,
+          "subject": 6,
+          "lectureSheets": 60,
+          "exam": {
+            "dailyExam": 90,
+            "weeklyExams": 15,
+            "modelTest": 4
+          },
+          "instructors": [
+            {
+              "instructorId": "inst6",
+              "name": "Dr. White",
+              "image": "instructor_url6",
+              "institute": "GHI University"
+            },
+            {
+              "instructorId": "inst7",
+              "name": "Prof. Lee",
+              "image": "instructor_url7",
+              "institute": "JKL Institute"
+            }
+          ],
+          "courseSyllabus": "syllabusUrl3"
+        }
+      ]
+      
+}
