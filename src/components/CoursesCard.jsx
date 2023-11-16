@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { UserOutlined, StarOutlined } from "@ant-design/icons";
 import React from "react";
 
 const CoursesCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="main-container mb-20">
       <div className="text-center my-10">
-        <h1>all course cards</h1>
+        <h1>Our All Courses</h1>
+        <p className="w-full md:w-2/3 mx-auto mt-3 text-gray-700">
+          Online courses are digital learning programs available on the
+          internet, offering flexible, self-paced education with multimedia
+          content and certifications for completion.
+        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data?.map((course) => {
@@ -29,27 +34,31 @@ const CoursesCard = ({ data }) => {
                 <Image
                   src="/images/1.jpg"
                   alt="course-image"
+                  layout="responsive"
                   height={200}
                   width={380}
-                  responsive={true}
                 />
               </div>
               <div className="p-5">
                 <div>
                   <h2 className="text-xl font-semibold">{courseName}</h2>
-                  <span className="text-lg mr-2 font-medium text-primary">
+                  <span className="text-lg mr-2 font-semibold text-primary">
                     {discountPrice} Taka
                   </span>{" "}
-                  <del>{price} Taka</del>
+                  <del className="italic">{price} Taka</del>
                   <div className="flex justify-between items-center mt-1">
                     <div className="flex justify-between items-center">
-                      <span>icon</span>
-                      <p>
+                      <span>
+                        <UserOutlined />
+                      </span>
+                      <p className="ml-1">
                         Total Enrolled <span>{enrolled}</span>
                       </p>
                     </div>
                     <div>
-                      <span>icon</span>
+                      <span className="mr-2">
+                        <StarOutlined className="text-yellow-400" />
+                      </span>
                       <span>{rating}</span>
                     </div>
                   </div>

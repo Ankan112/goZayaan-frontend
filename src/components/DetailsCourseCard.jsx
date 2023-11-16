@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { UserOutlined } from "@ant-design/icons";
+import { IoBookOutline } from "react-icons/io5";
+import { RiLiveLine } from "react-icons/ri";
+import { MdOutlineLibraryBooks } from "react-icons/md";
+import { PiExamLight } from "react-icons/pi";
 
 const DetailsCourseCard = ({ data }) => {
-  console.log(data);
   if (!data) {
     return <p className="flex justify-center items-center">Loading...</p>;
   }
@@ -14,7 +18,6 @@ const DetailsCourseCard = ({ data }) => {
     price,
     discountPrice,
     enrolled,
-    rating,
     subject,
     liveClass,
     lectureSheets,
@@ -29,9 +32,9 @@ const DetailsCourseCard = ({ data }) => {
         <Image
           src="/images/1.jpg"
           alt="course-image"
+          layout="responsive"
           height={200}
           width={380}
-          responsive={true}
         />
       </div>
       <div className="p-5">
@@ -42,7 +45,7 @@ const DetailsCourseCard = ({ data }) => {
           </span>{" "}
           <del>{price} Taka</del>
           <div className=" mt-5">
-            <Link href={`courses/${id}`}>
+            <Link href={`/payment`}>
               <button
                 type="primary"
                 className="w-full py-2 border-none bg-blue-500 text-white cursor-pointer rounded-none hover:bg-blue-400 duration-300"
@@ -54,45 +57,51 @@ const DetailsCourseCard = ({ data }) => {
           </div>
           <div className="mt-5">
             <div className="flex items-center">
-              <span>icon</span>
-              <p>
+              <span>
+                <UserOutlined />
+              </span>
+              <p className="ml-1">
                 Total Enrolled <span>{enrolled}</span>
               </p>
             </div>
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <IoBookOutline />
+
+              <p className="ml-1">
                 <span>{subject}</span> Subjects
               </p>
             </div>
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <RiLiveLine />
+              <p className="ml-1">
                 <span>{liveClass}</span> Live Class
               </p>
             </div>
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <MdOutlineLibraryBooks />
+              <p className="ml-1">
                 <span>{lectureSheets}</span> Lecture Sheets
               </p>
             </div>
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <PiExamLight />
+
+              <p className="ml-1">
                 <span>{exam.dailyExam}</span> Daily Exams
               </p>
             </div>
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <PiExamLight />
+
+              <p className="ml-1">
                 <span>{exam.weeklyExams}</span> Weekly Exams
               </p>
             </div>
 
             <div className="flex items-center mt-3">
-              <span>icon</span>
-              <p>
+              <PiExamLight />
+
+              <p className="ml-1">
                 <span>{exam.modelTest}</span> Final Model Tests
               </p>
             </div>

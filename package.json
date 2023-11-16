@@ -1,12 +1,12 @@
 {
-  "name": "front-end-tailwind-and-ant-design",
+  "name": "go-zayaan-front-end",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "json-server":"json-server --watch db.json --port 5000",
+    "json-server": "json-server --watch db.json --port 5000",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,7 +15,8 @@
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.47.0"
+    "react-hook-form": "^7.47.0",
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^10",
