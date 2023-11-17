@@ -60,10 +60,12 @@ const CourseDetailsPage = ({ data }) => {
   );
 };
 export async function getStaticPaths() {
-  const res = await fetch(`http://localhost:5000/courses`);
+  const res = await fetch(
+    `https://go-zayaan-backend-oggc5i5ew-ankan112.vercel.app/courses`
+  );
   const courses = await res.json();
 
-  const paths = courses.map((course) => ({
+  const paths = courses?.map((course) => ({
     params: { courseId: course.id.toString() },
   }));
 
@@ -72,7 +74,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { courseId } = params;
-  const res = await fetch(`http://localhost:5000/courses/${courseId}`);
+  const res = await fetch(
+    `https://go-zayaan-backend-oggc5i5ew-ankan112.vercel.app/courses/${courseId}`
+  );
   const data = await res.json();
   return { props: { data } };
 }
