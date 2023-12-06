@@ -60,7 +60,7 @@ const CourseDetailsPage = ({ data }) => {
   );
 };
 export async function getStaticPaths() {
-  const res = await fetch(`https://go-zayaan-server.vercel.app/courses`);
+  const res = await fetch(`https://go-zayaan-server-1.onrender.com/courses`);
   const courses = await res.json();
 
   const paths = courses?.map((course) => ({
@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { courseId } = params;
   const res = await fetch(
-    `https://go-zayaan-server.vercel.app/courses/${courseId}`
+    `https://go-zayaan-server-1.onrender.com/courses/${courseId}`
   );
   const data = await res.json();
   return { props: { data } };
